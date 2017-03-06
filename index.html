@@ -5,8 +5,152 @@
     <title>HTML Academy: Пинк</title>
   </head>
   <body>
-
-    <p>Репозиторий создан для обучения на интенсивном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">Продвинутый HTML и CSS</a>».</p>
-
+    <header class="site-header">
+      <div class="main-nav">
+        <div class="logo">
+          <a><img src="http://placehold.it/75x22" alt="Pink"></a>
+        </div>
+        <button type="button" class="main-nav__switch" name="menu-switch">Открыть меню</button>
+        <nav class="main-menu">
+          <ul class="main-menu__list">
+            <li class="main-menu__item"><a>Главная</a></li>
+            <li class="main-menu__item"><a href="photo.html">Фотографии</a></li>
+            <li class="main-menu__item"><a href="form.html">Конкурс</a></li>
+            <li class="main-menu__item"><a href="https://htmlacademy.ru/" target="_blank">HTML Academy</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main class="site-content">
+      <section class="download-app">
+        <a href="https://itunes.apple.com" class="btn btn--white" target="_blank">Скачать приложение</a>
+        <div class="download-app__markets">
+          <a href="https://itunes.apple.com" class="btn__market btn__market--apple" target="_blank">ITunes</a>
+          <a href="https://itunes.apple.com" class="btn__market btn__market--android" target="_blank">Google Play</a>
+          <a href="https://itunes.apple.com" class="btn__market btn__market--windows" target="_blank">Windows market</a>
+          <p class="download-app__text">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+        </div>
+      </section>
+      <section class="promo">
+        <div class="promo-header">
+          <p class="promo-header__heading">Устали от серости мегаполиса?</p>
+          <p class="promo-header__heading">Нам есть, что вам предложить!</p>
+        </div>
+        <ul class="promo__list">
+          <li class="promo__item">
+            <b class="promo__heading">Поднимает настроение</b>
+            <p class="promo__text">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
+          </li>
+          <li class="promo__item">
+            <b class="promo__heading">Меняет мир вокруг</b>
+            <p class="promo__text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+          </li>
+          <li class="promo__item">
+            <b class="promo__heading">Заводит новых друзей</b>
+            <p class="promo__text">Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых</p>
+          </li>
+        </ul>
+      </section>
+      <section class="review-slider">
+        <div class="review-slider__review">
+          <b class="review-slider__name">Николай Петров</b>
+          <p class="review-slider__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+        </div>
+        <div class="review-slider__review">
+          <b class="review-slider__name">Екатерина Кузнецова</b>
+          <p class="review-slider__text">«Скачала PINK пару месяцев назад и такое ощущение, что оно мне никогда не надоест! Все говорят, что пора снять розовые очки... и скачать на замену PINK ;)»</p>
+        </div>
+        <div class="review-slider__review">
+          <b class="review-slider__name">Василий Котовский</b>
+          <p class="review-slider__text">«Девушка подсадила на это простое с виду приложение, но оно правда затягивает и заряжает положительными эмоциями. Мир не такой унылый, как кажется, друзья!»</p>
+        </div>
+        <div class="paginator">
+          <input type="radio" name="review-1" class="btn__slider" checked>
+          <input type="radio" name="review-2" class="btn__slider">
+          <input type="radio" name="review-3" class="btn__slider">
+        </div>
+      </section>
+      <section class="pay-plans">
+        <table class="pay-plans__table">
+          <tr>
+            <th class="pay-plans__plan">
+              <b class="pay-plans__name">База</b>
+              <p class="pay-plans__cost">1,99 USD</p>
+            </th>
+            <th class="pay-plans__plan pay-plans__plan--hit">
+              <b class="pay-plans__name">Стандарт</b>
+              <p class="pay-plans__cost">3,99 USD</p>
+            </th>
+            <th class="pay-plans__plan">
+              <b class="pay-plans__name">Анлим</b>
+              <p class="pay-plans__cost">9,99 USD</p>
+            </th>
+          </tr>
+          <tr>
+            <td class="pay-plans__service">
+              <span class="pay-plans__include pay-plans__include--true">Розовый фильтр</span>
+            </td>
+            <td>
+              <span class="pay-plans__include pay-plans__include--true">Розовый фильтр</span>
+            </td>
+            <td>
+              <span class="pay-plans__include pay-plans__include--true">Розовый фильтр</span>
+            </td>
+          </tr>
+          <tr>
+            <td class="pay-plans__service">
+              <span class="pay-plans__include pay-plans__include--false">Смайлики</span>
+            </td>
+            <td class="pay-plans__service">
+              <span class="pay-plans__include pay-plans__include--true">Смайлики</span>
+            </td>
+            <td class="pay-plans__service">
+              <span class="pay-plans__include pay-plans__include--true">Смайлики</span>
+            </td>
+          </tr>
+          <tr>
+            <td class="pay-plans__service">
+              <span class="pay-plans__include pay-plans__include--false">Комментарии</span>
+            </td>
+            <td class="pay-plans__service">
+              <span class="pay-plans__include pay-plans__include--false">Комментарии</span>
+            </td>
+            <td class="pay-plans__service">
+              <span class="pay-plans__include pay-plans__include--true">Комментарии</span>
+            </td>
+          </tr>
+        </table>
+        <div class="paginator">
+          <input type="radio" name="plan-1" class="btn__slider">
+          <input type="radio" name="plan-2" class="btn__slider" checked>
+          <input type="radio" name="plan-3" class="btn__slider">
+        </div>
+      </section>
+      <section class="contacts">
+        <p class="contacts__heading">
+          Остались вопросы?<br>
+          Свяжитесь с нами!
+        </p>
+        <ul class="contacts__list">
+          <li class="contacts__item">
+            <b class="contacts__heading">Звоните:</b><br>
+            <a href="tel:+78125556666" class="contacts__link">+7 (812) 555-66-66</a>
+          </li>
+          <li class="contacts__item">
+            <b class="contacts__heading">Пишите:</b><br>
+            <a href="mailto:mail@htmlacademy.ru" class="contacts__link">mail@htmlacademy.ru</a>
+          </li>
+          <li class="contacts__item">
+            <b class="contacts__heading">Приезжайте в гости:</b><br>
+            <a class="contacts__link">ул. Большая Конюшенная, 19/8</a>
+          </li>
+        </ul>
+        <div class="map">
+          <iframe src="https://api-maps.yandex.ru/frame/v1/-/CZxd6Ei3"></iframe>
+        </div>
+      </section>
+    </main>
+    <footer>
+    </footer>
   </body>
 </html>
