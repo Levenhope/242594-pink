@@ -1,0 +1,41 @@
+.contacts {
+  
+}
+
+.contacts__heading {
+  font-size: 24px;
+  font-weight: 100;
+  text-align: center;
+  color: @menu-color;
+}
+
+.contacts__list {
+  padding: 0 40px;
+  list-style: none;
+  text-align: center;
+}
+
+.contacts__item {
+  margin-bottom: 30px;
+}
+
+.contacts__text {
+  font-size: 18px;
+  font-weight: bold;
+  color: @menu-color;
+}
+
+.contacts__link {
+  font-size: 24px;
+  font-weight: lighter;
+  text-decoration: none;
+  color: @accent-color;
+  &:hover {
+    text-decoration: underline;
+    color: @menu-color;
+  }
+  &:active {
+    text-decoration: underline;
+    color: fade(@menu-color, 30%);
+  }
+}

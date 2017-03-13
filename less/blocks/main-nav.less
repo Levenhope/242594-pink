@@ -1,0 +1,65 @@
+.main-nav {
+  position: relative;
+  z-index: 2;
+  background-color: @menu-color;
+}
+.main-nav__menu {
+}
+
+.main-nav__top-bar{
+  padding: 20px;
+}
+
+.main-nav__logo {
+  display: inline-block;
+}
+
+.main-nav__switch {
+  float: right;
+  width: 24px;
+  height: 23px;
+  overflow: hidden;
+  text-indent: -999px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  background-image:url('../../img/icon-menu-cross.svg');
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.main-nav__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-bottom: 1px solid #000000;
+}
+.main-nav__item {
+  font-size: 18px;
+  line-height: 32px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  a {
+    display: block;
+    line-height: 62px;
+    text-decoration: none;
+    color: #ffffff;
+    box-shadow: inset 0px 1px 0px 0px rgba(255,255,255,0.15),
+                0px -1px 0px 0px rgba(0,0,0,1);
+    &:hover {
+      color: @accent-color;
+    }
+    &:active {
+      color: fade(@accent-color, 30%);
+    }
+  }
+  &--current {
+    a {
+    box-shadow: 0px -1px 0px 0px rgba(0,0,0,1);
+    &:hover {
+      color: #ffffff;
+    }
+    }
+  }
+}
