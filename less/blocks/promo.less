@@ -1,0 +1,49 @@
+.promo {
+  background-color: #ffffff;
+}
+.promo__header {
+  padding: 20px 55px 5px;
+  p {
+    font-size: 24px;
+    font-weight: lighter;
+    text-align: center;
+    color: @menu-color;
+  }
+  &:after {
+    content: "";
+    position: relative;
+    right: 55px;
+    bottom: 24px;
+    width: 0;
+    height: 0;
+    border-top: 0px solid transparent;
+    border-left: 320px solid #ffffff;
+    border-bottom: 30px solid @light-color;
+  }
+}
+
+.promo__list {
+  margin: 0;
+  padding: 60px 25px;
+  list-style: none;
+  background-color: @light-color;
+  text-align: center;
+  &:after {
+    content: "";
+    background-image: url(../../img/iphone-screen-mobile@1x.png);
+  }
+}
+
+.promo__item {
+  line-height: 24px;
+}
+
+.promo__heading {
+  font-size: 18px;
+  font-weight: bold;
+  color: #000000;
+}
+
+.promo__text {
+  font-size: 14px;
+}

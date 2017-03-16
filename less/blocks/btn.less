@@ -1,0 +1,100 @@
+.btn {
+  display: block;
+  width: 272px;
+  height: 50px;
+  margin: auto;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 18px;
+  text-decoration: none;
+  text-align: center;
+  border-width: 3px;
+  border-style: solid;
+  border-radius: 30px;
+  outline: none;
+  cursor: pointer;
+  &--link {
+    line-height: 50px;
+  }
+  &--white {
+    color: #ffffff;
+    border-color: #ffffff;
+    &:hover {
+      color: @accent-color;
+      background-color: #ffffff;
+    }
+    &:active {
+      color: fade(@accent-color, 30%);
+      background-color: #ffffff;
+    }
+  }
+  &--pink {
+    color: @accent-color;
+    border-color: @accent-color;
+    background-color: @light-color;
+    &:hover {
+      color: #ffffff;
+      background-color: @accent-color;
+    }
+    &:active {
+      color: fade(#ffffff, 30%);
+      background-color: @accent-color;
+    }
+  }
+  &--cancel {
+    color: fade(@menu-color, 10%);
+    border-color: fade(@menu-color, 10%);
+    background-color: @light-color;
+    &:hover {
+      color: fade(@menu-color, 30%);
+      border-color: fade(@menu-color, 30%);
+    }
+    &:active {
+      color: fade(#ffffff, 30%);
+      border: none;
+      background-color: fade(@menu-color, 30%);
+    }
+  }
+  &--editor {
+    margin: 10px auto;
+  }
+}
+
+.btn__form {
+  margin: 20px;
+  padding: 20px;
+  width: 280px;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: #ffffff;
+  border: none;
+  border-radius: 2px;
+  background-color: #2aab6d;
+  cursor: pointer;
+  outline: none;
+  &--disabled {
+    color: #ffffff;
+    background-color: @field-color;
+  }
+  &:hover {
+    background-color: #1c9b5e;
+  }
+  &:active {
+    color: fade(#ffffff, 30%);
+    background-color: #1c9b5e;
+  }
+}
+
+.btn__social {
+  &--twitter {
+
+  }
+  &--facebook {
+
+  }
+  &--youtube {
+
+  }
+}

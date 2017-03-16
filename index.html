@@ -3,27 +3,30 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Пинк</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
-  <body>
-    <header class="site-header">
+  <body class="pink">
+    <header class="site-header site-header--index">
       <div class="main-nav">
-        <div class="logo">
-          <a><img src="http://placehold.it/75x22" alt="Pink"></a>
+        <div class="main-nav__top-bar">
+          <div class="main-nav__logo">
+            <a href="index.html"><img src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="pink"></a>
+          </div>
+          <button type="button" class="main-nav__switch" name="menu-switch">Открыть меню</button>
         </div>
-        <button type="button" class="main-nav__switch" name="menu-switch">Открыть меню</button>
-        <nav class="main-menu">
-          <ul class="main-menu__list">
-            <li class="main-menu__item"><a>Главная</a></li>
-            <li class="main-menu__item"><a href="photo.html">Фотографии</a></li>
-            <li class="main-menu__item"><a href="form.html">Конкурс</a></li>
-            <li class="main-menu__item"><a href="https://htmlacademy.ru/" target="_blank">HTML Academy</a></li>
+        <nav class="main-nav__menu">
+          <ul class="main-nav__list">
+            <li class="main-nav__item main-nav__item--current"><a>Главная</a></li>
+            <li class="main-nav__item"><a href="photo.html">Фотографии</a></li>
+            <li class="main-nav__item"><a href="form.html">Конкурс</a></li>
+            <li class="main-nav__item"><a href="https://htmlacademy.ru/" target="_blank">HTML Academy</a></li>
           </ul>
         </nav>
       </div>
     </header>
     <main class="site-content">
       <section class="download-app">
-        <a href="https://itunes.apple.com" class="btn btn--white" target="_blank">Скачать приложение</a>
+        <a href="https://itunes.apple.com" class="btn btn--white btn--link" target="_blank">Скачать приложение</a>
         <div class="download-app__markets">
           <a href="https://itunes.apple.com" class="btn__market btn__market--apple" target="_blank">ITunes</a>
           <a href="https://itunes.apple.com" class="btn__market btn__market--android" target="_blank">Google Play</a>
@@ -32,9 +35,9 @@
         </div>
       </section>
       <section class="promo">
-        <div class="promo-header">
-          <p class="promo-header__heading">Устали от серости мегаполиса?</p>
-          <p class="promo-header__heading">Нам есть, что вам предложить!</p>
+        <div class="promo__header">
+          <p>Устали от серости мегаполиса?</p>
+          <p>Нам есть, что вам предложить!</p>
         </div>
         <ul class="promo__list">
           <li class="promo__item">
@@ -65,65 +68,65 @@
           <p class="review-slider__text">«Девушка подсадила на это простое с виду приложение, но оно правда затягивает и заряжает положительными эмоциями. Мир не такой унылый, как кажется, друзья!»</p>
         </div>
         <div class="paginator">
-          <input type="radio" name="review-1" class="btn__slider" checked>
-          <input type="radio" name="review-2" class="btn__slider">
-          <input type="radio" name="review-3" class="btn__slider">
+          <input type="radio" name="review" class="btn__slider" checked>
+          <input type="radio" name="review" class="btn__slider">
+          <input type="radio" name="review" class="btn__slider">
         </div>
       </section>
       <section class="pay-plans">
-        <table class="pay-plans__table">
-          <tr>
-            <th class="pay-plans__plan">
-              <b class="pay-plans__name">База</b>
-              <p class="pay-plans__cost">1,99 USD</p>
-            </th>
-            <th class="pay-plans__plan pay-plans__plan--hit">
-              <b class="pay-plans__name">Стандарт</b>
-              <p class="pay-plans__cost">3,99 USD</p>
-            </th>
-            <th class="pay-plans__plan">
-              <b class="pay-plans__name">Анлим</b>
-              <p class="pay-plans__cost">9,99 USD</p>
-            </th>
-          </tr>
-          <tr>
-            <td class="pay-plans__service">
-              <span class="pay-plans__include pay-plans__include--true">Розовый фильтр</span>
-            </td>
-            <td>
-              <span class="pay-plans__include pay-plans__include--true">Розовый фильтр</span>
-            </td>
-            <td>
-              <span class="pay-plans__include pay-plans__include--true">Розовый фильтр</span>
-            </td>
-          </tr>
-          <tr>
-            <td class="pay-plans__service">
-              <span class="pay-plans__include pay-plans__include--false">Смайлики</span>
-            </td>
-            <td class="pay-plans__service">
-              <span class="pay-plans__include pay-plans__include--true">Смайлики</span>
-            </td>
-            <td class="pay-plans__service">
-              <span class="pay-plans__include pay-plans__include--true">Смайлики</span>
-            </td>
-          </tr>
-          <tr>
-            <td class="pay-plans__service">
-              <span class="pay-plans__include pay-plans__include--false">Комментарии</span>
-            </td>
-            <td class="pay-plans__service">
-              <span class="pay-plans__include pay-plans__include--false">Комментарии</span>
-            </td>
-            <td class="pay-plans__service">
-              <span class="pay-plans__include pay-plans__include--true">Комментарии</span>
-            </td>
-          </tr>
-        </table>
+          <table class="pay-plans__table">
+            <tr>
+              <th class="pay-plans__plan">
+                <b class="pay-plans__name">База</b>
+                <p class="pay-plans__cost">1,99 USD</p>
+              </th>
+              <th class="pay-plans__plan pay-plans__plan--hit">
+                <b class="pay-plans__name">Стандарт</b>
+                <p class="pay-plans__cost">3,99 USD</p>
+              </th>
+              <th class="pay-plans__plan">
+                <b class="pay-plans__name">Анлим</b>
+                <p class="pay-plans__cost">9,99 USD</p>
+              </th>
+            </tr>
+            <tr>
+              <td class="pay-plans__service">
+                <span class="pay-plans__include pay-plans__include--true">Розовый фильтр</span>
+              </td>
+              <td class="pay-plans__service">
+                <span class="pay-plans__include pay-plans__include--true">Розовый фильтр</span>
+              </td>
+              <td class="pay-plans__service">
+                <span class="pay-plans__include pay-plans__include--true">Розовый фильтр</span>
+              </td>
+            </tr>
+            <tr>
+              <td class="pay-plans__service">
+                <span class="pay-plans__include pay-plans__include--false">Смайлики</span>
+              </td>
+              <td class="pay-plans__service">
+                <span class="pay-plans__include pay-plans__include--true">Смайлики</span>
+              </td>
+              <td class="pay-plans__service">
+                <span class="pay-plans__include pay-plans__include--true">Смайлики</span>
+              </td>
+            </tr>
+            <tr>
+              <td class="pay-plans__service">
+                <span class="pay-plans__include pay-plans__include--false">Комментарии</span>
+              </td>
+              <td class="pay-plans__service">
+                <span class="pay-plans__include pay-plans__include--false">Комментарии</span>
+              </td>
+              <td class="pay-plans__service">
+                <span class="pay-plans__include pay-plans__include--true">Комментарии</span>
+              </td>
+            </tr>
+          </table>
         <div class="paginator">
-          <input type="radio" name="plan-1" class="btn__slider">
-          <input type="radio" name="plan-2" class="btn__slider" checked>
-          <input type="radio" name="plan-3" class="btn__slider">
+          <input type="radio" name="plan" class="btn__slider">
+          <input type="radio" name="plan" class="btn__slider" checked>
+          <input type="radio" name="plan" class="btn__slider">
         </div>
       </section>
       <section class="contacts">
@@ -133,20 +136,20 @@
         </p>
         <ul class="contacts__list">
           <li class="contacts__item">
-            <b class="contacts__heading">Звоните:</b><br>
+            <b class="contacts__text">Звоните:</b><br>
             <a href="tel:+78125556666" class="contacts__link">+7 (812) 555-66-66</a>
           </li>
           <li class="contacts__item">
-            <b class="contacts__heading">Пишите:</b><br>
+            <b class="contacts__text">Пишите:</b><br>
             <a href="mailto:mail@htmlacademy.ru" class="contacts__link">mail@htmlacademy.ru</a>
           </li>
           <li class="contacts__item">
-            <b class="contacts__heading">Приезжайте в гости:</b><br>
+            <b class="contacts__text">Приезжайте в гости:</b><br>
             <a class="contacts__link">ул. Большая Конюшенная, 19/8</a>
           </li>
         </ul>
         <div class="map">
-          <iframe src="https://api-maps.yandex.ru/frame/v1/-/CZxd6Ei3"></iframe>
+          <iframe src="https://api-maps.yandex.ru/frame/v1/-/CZxd6Ei3" class="map__frame"></iframe>
         </div>
       </section>
     </main>

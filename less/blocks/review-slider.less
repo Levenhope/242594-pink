@@ -1,0 +1,31 @@
+.review-slider {
+  padding: 50px 15px 0px;
+  &:after {
+    content: "";
+    position: relative;
+    right: 15px;
+    bottom: 24px;
+    width: 0;
+    height: 0;
+    border-top: 0px solid transparent;
+    border-left: 320px solid #ffffff;
+    border-bottom: 30px solid @light-color;
+  }
+}
+.review-slider__review {
+  line-height: 30px;
+  text-align: center;
+
+  &:nth-child(n+2) {
+    display: none;
+  }
+}
+.review-slider__name {
+  font-size: 18px;
+  font-weight: bold;
+  color: #000000;
+}
+.review-slider__text {
+  font-size: 14px;
+  color: @menu-color;
+}
