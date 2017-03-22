@@ -3,79 +3,109 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Пинк</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
     <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
   <body class="pink">
-    <header class="site-header site-header--index">
+    <header class="site-header">
       <div class="main-nav">
-        <div class="main-nav__top-bar">
-          <div class="main-nav__logo">
-            <a href="index.html"><img src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="pink"></a>
+        <div class="main-nav__wrapper">
+          <div class="main-nav__top-bar main-nav__top-bar--open">
+            <div class="main-nav__logo">
+              <a href="index.html"><img src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="pink"></a>
+            </div>
+            <button type="button" class="main-nav__switch main-nav__switch--open" name="menu-switch">Открыть меню</button>
           </div>
-          <button type="button" class="main-nav__switch" name="menu-switch">Открыть меню</button>
+          <nav class="main-nav__menu main-nav__menu--open">
+            <ul class="main-nav__list">
+              <li class="main-nav__item main-nav__item--current"><a>Главная</a></li>
+              <li class="main-nav__item"><a href="photo.html">Фотографии</a></li>
+              <li class="main-nav__item"><a href="form.html">Конкурс</a></li>
+              <li class="main-nav__item"><a href="https://htmlacademy.ru/" target="_blank">HTML Academy</a></li>
+            </ul>
+          </nav>
         </div>
-        <nav class="main-nav__menu">
-          <ul class="main-nav__list">
-            <li class="main-nav__item main-nav__item--current"><a>Главная</a></li>
-            <li class="main-nav__item"><a href="photo.html">Фотографии</a></li>
-            <li class="main-nav__item"><a href="form.html">Конкурс</a></li>
-            <li class="main-nav__item"><a href="https://htmlacademy.ru/" target="_blank">HTML Academy</a></li>
-          </ul>
-        </nav>
+      </div>
+      <div class="site-header__heading site-header__heading--index">
+        <h1>Приложение для редактирования фото PINK</h1>
       </div>
     </header>
     <main class="site-content">
       <section class="download-app">
-        <a href="https://itunes.apple.com" class="btn btn--white btn--link" target="_blank">Скачать приложение</a>
-        <div class="download-app__markets">
-          <a href="https://itunes.apple.com" class="btn__market btn__market--apple" target="_blank">ITunes</a>
-          <a href="https://itunes.apple.com" class="btn__market btn__market--android" target="_blank">Google Play</a>
-          <a href="https://itunes.apple.com" class="btn__market btn__market--windows" target="_blank">Windows market</a>
+        <div class="download-app__wrapper">
+          <h1 class="download-app__heading">Взгляните на жизнь иначе!</h1>
+          <a href="https://itunes.apple.com" class="btn btn--white btn--link" target="_blank">Скачать приложение</a>
+          <div class="download-app__markets">
+            <a href="https://itunes.apple.com" class="btn__market btn__market--apple" target="_blank">ITunes</a>
+            <a href="https://itunes.apple.com" class="btn__market btn__market--android" target="_blank">Google Play</a>
+            <a href="https://itunes.apple.com" class="btn__market btn__market--windows" target="_blank">Windows market</a>
+          </div>
           <p class="download-app__text">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
         </div>
       </section>
       <section class="promo">
-        <div class="promo__header">
-          <p>Устали от серости мегаполиса?</p>
-          <p>Нам есть, что вам предложить!</p>
+          <div class="promo__header">
+            <p class="promo__intro">Устали от серости мегаполиса?</p>
+            <p class="promo__intro promo__intro--bottom">Нам есть, что вам предложить!</p>
+          </div>
+          <div class="promo__main">
+            <ul class="promo__list">
+              <li class="promo__item">
+                <b class="promo__heading">Поднимает настроение</b>
+                <p class="promo__text">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
+              </li>
+              <li class="promo__item">
+                <b class="promo__heading">Меняет мир вокруг</b>
+                <p class="promo__text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+              </li>
+              <li class="promo__item">
+                <b class="promo__heading">Заводит новых друзей</b>
+                <p class="promo__text">Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых</p>
+              </li>
+            </ul>
+          </div>
+      </section>
+      <section class="effect">
+        <div class="effect__wrapper">
+          <b class="effect__heading">Эффект <br>на 24 часа!</b>
+          <p class="effect__text">Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!</p>
+          <a href="#" class="effect__link">Узнать больше об исследовании</a>
         </div>
-        <ul class="promo__list">
-          <li class="promo__item">
-            <b class="promo__heading">Поднимает настроение</b>
-            <p class="promo__text">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
-          </li>
-          <li class="promo__item">
-            <b class="promo__heading">Меняет мир вокруг</b>
-            <p class="promo__text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
-          </li>
-          <li class="promo__item">
-            <b class="promo__heading">Заводит новых друзей</b>
-            <p class="promo__text">Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых</p>
-          </li>
-        </ul>
       </section>
       <section class="review-slider">
         <div class="review-slider__review">
-          <b class="review-slider__name">Николай Петров</b>
+          <div class="review-slider__name-job-wrap">
+            <b class="review-slider__name">Николай Петров</b>
+            <span class="review-slider__job">25 лет, водитель трамвая</span>
+          </div>
           <p class="review-slider__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
         </div>
         <div class="review-slider__review">
-          <b class="review-slider__name">Екатерина Кузнецова</b>
+          <div class="review-slider__name-job-wrap">
+            <b class="review-slider__name">Екатерина Кузнецова</b>
+            <span class="review-slider__job">25 лет, водитель трамвая</span>
+          </div>
           <p class="review-slider__text">«Скачала PINK пару месяцев назад и такое ощущение, что оно мне никогда не надоест! Все говорят, что пора снять розовые очки... и скачать на замену PINK ;)»</p>
         </div>
         <div class="review-slider__review">
-          <b class="review-slider__name">Василий Котовский</b>
+          <div class="review-slider__name-job-wrap">
+            <b class="review-slider__name">Василий Котовский</b>
+            <span class="review-slider__job">25 лет, водитель трамвая</span>
+          </div>
           <p class="review-slider__text">«Девушка подсадила на это простое с виду приложение, но оно правда затягивает и заряжает положительными эмоциями. Мир не такой унылый, как кажется, друзья!»</p>
         </div>
-        <div class="paginator">
+        <div class="paginator paginator--review-slider">
           <input type="radio" name="review" class="btn__slider" checked>
           <input type="radio" name="review" class="btn__slider">
           <input type="radio" name="review" class="btn__slider">
         </div>
       </section>
       <section class="pay-plans">
+        <div class="pay-plans__wrapper">
           <table class="pay-plans__table">
             <tr>
+              <th class="pay-plans__plan pay-plans__plan--empty">&nbsp;</th>
               <th class="pay-plans__plan">
                 <b class="pay-plans__name">База</b>
                 <p class="pay-plans__cost">1,99 USD</p>
@@ -90,6 +120,9 @@
               </th>
             </tr>
             <tr>
+              <td class="pay-plans__service pay-plans__service--outstand">
+                <span class="pay-plans__include pay-plans__include--outstand">Розовый фильтр</span>
+              </td>
               <td class="pay-plans__service">
                 <span class="pay-plans__include pay-plans__include--true">Розовый фильтр</span>
               </td>
@@ -101,6 +134,9 @@
               </td>
             </tr>
             <tr>
+              <td class="pay-plans__service pay-plans__service--outstand">
+                <span class="pay-plans__include pay-plans__include--outstand">Смайлики</span>
+              </td>
               <td class="pay-plans__service">
                 <span class="pay-plans__include pay-plans__include--false">Смайлики</span>
               </td>
@@ -112,6 +148,9 @@
               </td>
             </tr>
             <tr>
+              <td class="pay-plans__service pay-plans__service--outstand">
+                <span class="pay-plans__include pay-plans__include--outstand">Комментарии</span>
+              </td>
               <td class="pay-plans__service">
                 <span class="pay-plans__include pay-plans__include--false">Комментарии</span>
               </td>
@@ -123,17 +162,20 @@
               </td>
             </tr>
           </table>
-        <div class="paginator">
-          <input type="radio" name="plan" class="btn__slider">
-          <input type="radio" name="plan" class="btn__slider" checked>
-          <input type="radio" name="plan" class="btn__slider">
+          <div class="paginator paginator--pay-plans">
+            <input type="radio" name="plan" class="btn__slider">
+            <input type="radio" name="plan" class="btn__slider" checked>
+            <input type="radio" name="plan" class="btn__slider">
+          </div>
         </div>
       </section>
       <section class="contacts">
-        <p class="contacts__heading">
-          Остались вопросы?<br>
-          Свяжитесь с нами!
-        </p>
+        <div class="contacts__heading">
+          <span>
+            Остались вопросы?<br>
+            Свяжитесь с нами!
+          </span>
+        </div>
         <ul class="contacts__list">
           <li class="contacts__item">
             <b class="contacts__text">Звоните:</b><br>
@@ -153,7 +195,18 @@
         </div>
       </section>
     </main>
-    <footer>
+    <footer class="site-footer site-footer--hide">
+      <div class="site-footer__wrapper">
+        <div class="site-footer__logo">
+          <img src="http://placehold.it/147x40" alt="Pink">
+        </div>
+        <div class="site-footer__social">
+          <a href="#" class="btn__social btn__social--twitter">Twitter</a>
+          <a href="#" class="btn__social btn__social--facebook">Facebook</a>
+          <a href="#" class="btn__social btn__social--youtube">Youtube</a>
+        </div>
+        <span class="site-footer__credit">Разработано <a href="https://htmlacademy.ru/" class="btn__academy" target="_blank">HTML academy</a></span>
+      </div>
     </footer>
   </body>
 </html>

@@ -1,20 +1,44 @@
 .pay-plans {
-  margin-left: -245px;
-  padding-top: 50px;
-  padding-bottom: 20px;
-  width: 270px * 3;
+  .container();
+  overflow: hidden;
   background-color: @light-color;
 }
-.pay-plans__table {
+
+.pay-plans__wrapper {
+  margin-left: -245px;
+  padding-top: 50px;
+  width: 270px * 3;
+  padding-bottom: 20px;
+  background-color: @light-color;
+
+  @media @tablet-width {
+    width: 100%;
+    margin-left: 0;
+  }
 }
+
+.pay-plans__table {
+  margin: auto;
+  @media @tablet-width {
+    max-width: 620px;
+  }
+}
+
 .pay-plans__plan {
-  width: 275px;
   height: 95px;
   vertical-align: middle;
   color: #ffffff;
   background-color: @menu-color;
-  &--hit {
-
+  &--hit {}
+  &--empty {
+    display: none;
+    @media @tablet-width {
+      display: table-cell;
+      visibility: hidden;
+    }
+  }
+  @media @tablet-width {
+    min-width: 155px;
   }
 }
 .pay-plans__name {
@@ -22,6 +46,10 @@
   font-weight: bold;
   line-height: 30px;
   text-transform: uppercase;
+
+  @media @tablet-width {
+    font-size: 16px;
+  }
 }
 .pay-plans__cost {
   margin: 0;
@@ -29,12 +57,25 @@
   font-weight: 100;
   line-height: 30px;
   text-transform: uppercase;
+
+  @media @tablet-width {
+    font-size: 18px;
+  }
 }
+
 .pay-plans__service {
   width: 275px;
   padding: 20px;
   background-color: #ffffff;
+  &--outstand {
+    display: none;
+    @media @tablet-width {
+      display: table-cell;
+      padding: 0 15px;
+    }
   }
+}
+
 .pay-plans__include {
   font-size: 14px;
   line-height: 30px;
@@ -42,4 +83,12 @@
   color: @menu-color;
   &--true {}
   &--false {}
+
+  @media @tablet-width {
+    display: none;
+    &--outstand {
+      display: inline;
+      text-transform: capitalize;
+    }
+  }
 }

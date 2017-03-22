@@ -13,6 +13,11 @@
   border-radius: 30px;
   outline: none;
   cursor: pointer;
+
+  @media @tablet-width {
+    width: 294px;
+  }
+
   &--link {
     line-height: 50px;
   }
@@ -57,11 +62,19 @@
   }
   &--editor {
     margin: 10px auto;
+
+    @media @tablet-width {
+      width: 260px;
+      margin: 20px auto 0;
+    }
+    @media @desktop-width {
+      width: 180px;
+      margin: 0 auto;
+    }
   }
 }
 
 .btn__form {
-  margin: 20px;
   padding: 20px;
   width: 280px;
   font-size: 18px;

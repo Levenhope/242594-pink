@@ -1,27 +1,100 @@
 .editor {
-  padding: 20px;
+  width: 320px;
+  margin: 0 auto;
   background-color: @light-color;
+
+  @media @tablet-width {
+    width: 100%;
+    padding: 55px 0;
+    min-height: 400px;
+  }
+  @media @desktop-width {
+    width: 940px;
+    padding: 0;
+  }
+}
+
+.editor__wrapper {
+  .container();
+  display: flex;
+  flex-direction: column;
+
+  @media @tablet-width {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  @media @desktop-width {
+    width: auto;
+    padding: 55px 80px;
+  }
+}
+
+.editor__canvas {
+  padding-top: 20px;
+  text-align: center;
+  @media @tablet-width {
+    padding-top: 0;
+    img {
+      width: 300px;
+      height: 400px;
+    }
+  }
 }
 
 .editor__functions {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   margin-top: 40px;
   text-align: center;
+
+  @media @tablet-width {
+    margin-top: 0;
+  }
 }
 
 .editor__ranges {
   margin: 30px auto;
   text-align: center;
+
+  @media @tablet-width {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.editor__icon-buttons {
+  @media @tablet-width {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .editor__range {
   width: 235px;
+  border-bottom: 1px solid #dddfe0;
   &--hidden {
     display: none;
+  
+    @media @tablet-width {
+      display: inline;
+    }
+  }
+
+  @media @tablet-width {
+    display: block;
   }
 }
 
 .editor__control {
   padding-top: 30px;
   padding-bottom: 15px;
-  border-top: 1px solid #dddfe0;
+
+  @media @tablet-width {
+    padding: 0;
+  }
+  @media @desktop-width {
+    display: flex;
+    flex-direction: row;
+  }
 }
