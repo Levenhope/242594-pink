@@ -10,4 +10,38 @@
 .container() {
   width: 320px;
   margin: 0 auto;
+
+  @media @tablet-width {
+    width: 660px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  @media @desktop-width {
+    width: 960px;
+    padding-left: 120px;
+    padding-right: 120px;
+  }
+}
+
+.oblique() {
+  content: "";
+  position: relative;
+  width: 0;
+  height: 0;
+  border-top: 0px solid transparent;
+  border-left: 320px solid #ffffff;
+  border-bottom: 30px solid @light-color;
+
+  @media @tablet-width {
+    left: -15px;
+    border-left: 690px solid #ffffff;
+    border-bottom: 60px solid @light-color;
+  }
+
+  @media @desktop-width {
+    left: -120px;
+    border-left: 1200px solid #ffffff;
+    border-bottom: 90px solid @light-color;
+  }
 }

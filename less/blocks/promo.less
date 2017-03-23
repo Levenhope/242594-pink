@@ -1,34 +1,53 @@
 .promo {
   background-color: #ffffff;
 }
+
 .promo__header {
+  .container();
   padding: 20px 55px 5px;
-  p {
-    font-size: 24px;
-    font-weight: lighter;
-    text-align: center;
-    color: @menu-color;
+  background-color: #ffffff;
+
+  @media @tablet-width {
+    padding: 50px 0;
   }
-  &:after {
-    content: "";
-    position: relative;
-    right: 55px;
-    bottom: 24px;
-    width: 0;
-    height: 0;
-    border-top: 0px solid transparent;
-    border-left: 320px solid #ffffff;
-    border-bottom: 30px solid @light-color;
+  &::after {
+    .oblique();
+
+    @media @tablet-width {
+      bottom: -20px;
+    }
   }
+}
+
+.promo__intro {
+  font-size: 24px;
+  font-weight: 100;
+  text-align: center;
+  color: @menu-color;
+
+  @media @tablet-width {
+    margin: 0;
+    font-size: 40px;
+    line-height: 48px;
+    &--bottom {
+      width: 340px;
+      margin: auto;
+    }
+  }
+}
+
+.promo__main {
+  .container();
+  background-color: @light-color;
 }
 
 .promo__list {
   margin: 0;
   padding: 60px 25px;
   list-style: none;
-  background-color: @light-color;
   text-align: center;
-  &:after {
+  background-color: @light-color;
+  &::after {
     content: "";
     background-image: url(../../img/iphone-screen-mobile@1x.png);
   }
@@ -36,14 +55,38 @@
 
 .promo__item {
   line-height: 24px;
+
+  @media @tablet-width {
+    display: block;
+    margin-left: 325px;
+    width: 300px;
+    text-align: left;
+  }
+  @media @desktop-width {
+    display: inline-block;
+    margin: auto;
+    width: 240px;
+    vertical-align: top;
+    text-align: center;
+  }
 }
 
 .promo__heading {
   font-size: 18px;
   font-weight: bold;
   color: #000000;
+
+  @media @desktop-width {
+    font-size: 30px;
+    line-height: 30px;
+  }
 }
 
 .promo__text {
   font-size: 14px;
+
+  @media @desktop-width {
+    font-size: 18px;
+    line-height: 30px;
+  }
 }

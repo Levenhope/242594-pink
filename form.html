@@ -3,48 +3,57 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Пинк</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
     <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
   <body class="pink">
     <header class="site-header">
       <div class="main-nav">
-        <div class="main-nav__top-bar">
-          <div class="main-nav__logo">
-            <a href="index.html"><img src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="pink"></a>
+        <div class="main-nav__wrapper">
+          <div class="main-nav__top-bar">
+            <div class="main-nav__logo">
+              <a href="index.html"><img src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="pink"></a>
+            </div>
+            <button type="button" class="main-nav__switch" name="menu-switch">Открыть меню</button>
           </div>
-          <button type="button" class="main-nav__switch" name="menu-switch">Открыть меню</button>
+          <nav class="main-nav__menu">
+            <ul class="main-nav__list">
+              <li class="main-nav__item"><a href="index.html">Главная</a></li>
+              <li class="main-nav__item"><a href="photo.html">Фотографии</a></li>
+              <li class="main-nav__item main-nav__item--current"><a>Конкурс</a></li>
+              <li class="main-nav__item"><a href="https://htmlacademy.ru/" target="_blank">HTML Academy</a></li>
+            </ul>
+          </nav>
         </div>
-        <nav class="main-nav__menu">
-          <ul class="main-nav__list">
-            <li class="main-nav__item"><a href="index.html">Главная</a></li>
-            <li class="main-nav__item"><a href="photo.html">Фотографии</a></li>
-            <li class="main-nav__item main-nav__item--current"><a>Конкурс</a></li>
-            <li class="main-nav__item"><a href="https://htmlacademy.ru/" target="_blank">HTML Academy</a></li>
-          </ul>
-        </nav>
       </div>
-      <h1 class="site-header__heading">Конкурс на самое безбашенное путешествие с Пинк</h1>
+      <div class="site-header__heading site-header__heading--form">
+        <h1>Конкурс на самое безбашенное путешествие с Пинк</h1>
+      </div>
     </header>
     <main class="site-content">
       <section class="form">
-        <p class="form__intro">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!</p>
+        <p class="form__intro">
+          Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!<br>
+          <span class="form__intro--extra">Пожалуйста, заполните форму ниже:</span>
+        </p>
         <form action="https://echo.htmlacademy.ru/" method="post">
-          <div class="form__name">
-            <div class="form__field-item">
-              <label for="last-name" class="form__field-label">Фамилия:</label>
+          <fieldset class="form__fieldset form__fieldset--name">
+            <div class="form__field-item form__field-item--name">
+              <label for="last-name" class="form__field-label form__field-label--name">Фамилия:</label>
               <input type="text" name="last-name" id="last-name" class="form__field" placeholder="Укажите фамилию *">
             </div>
-            <div class="form__field-item">
-              <label for="first-name" class="form__field-label">Имя:</label>
+            <div class="form__field-item form__field-item--name">
+              <label for="first-name" class="form__field-label form__field-label--name">Имя:</label>
               <input type="text" name="first-name" id="first-name" class="form__field" placeholder="Введите ваше имя *">
             </div>
-            <div class="form__field-item">
-              <label for="middle-name" class="form__field-label">Отчество:</label>
+            <div class="form__field-item form__field-item--name">
+              <label for="middle-name" class="form__field-label form__field-label--name">Отчество:</label>
               <input type="text" name="middle-name" id="middle-name" class="form__field" placeholder="Ну и отчество тоже">
             </div>
-          </div>
-          <div class="form__achieve">
-            <h2 class="form__question">Ваши безбашенные достижения в путешествии</h2>
+          </fieldset>
+          <fieldset class="form__fieldset form__fieldset--achieve">
+            <legend class="form__legend">Ваши безбашенные достижения в путешествии</legend>
             <div class="form__list-item">
               <label>
                 <input type="checkbox" name="shark-selfie" id="shark-selfie" checked>
@@ -81,19 +90,20 @@
                 <span class="form__list-label">Разгромил отель</span>
               </label>
             </div>
-          </div>
-          <div class="form__contacts">
-            <div class="form__field-item">
-              <label for="phone" class="form__field-label">Номер телефона</label>
+          </fieldset>
+          <fieldset class="form__fieldset form__fieldset--contact">
+            <legend class="form__legend form__legend--contact">Контактная информация</legend>
+            <div class="form__field-item form__field-item--contact">
+              <label for="phone" class="form__field-label form__field-label--contact">Номер телефона</label>
               <input type="tel" name="phone" id="phone" class="form__field" placeholder="Номер, пожалуйста">
             </div>
-            <div class="form__field-item">
-              <label for="email" class="form__field-label">Адрес почты</label>
+            <div class="form__field-item form__field-item--contact">
+              <label for="email" class="form__field-label form__field-label--contact">Адрес почты</label>
               <input type="email" name="email" id="email" class="form__field" placeholder="Введите почту*">
             </div>
-          </div>
-          <div class="form__app">
-            <h2 class="form__question">С каким приложением путешествовали?</h2>
+          </fieldset>
+          <fieldset class="form__fieldset form__fieldset--app">
+            <legend class="form__legend form__legend--app">С каким приложением путешествовали?</legend>
             <div class="form__list-item">
               <label>
                 <input type="radio" name="app" value="ios" checked>
@@ -112,26 +122,32 @@
                 <span class="form__list-label">Windows Phone</span>
               </label>
             </div>
+          </fieldset>
+          <fieldset class="form__fieldset form__fieldset--comment">
+            <legend class="form__legend">Опишите свои эмоции</legend>
+            <textarea name="comment" rows="6" class="form__field form__field--comment" cols="30" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+          </fieldset>
+          <div class="form__submit">
+            <input type="submit" class="btn__form" value="Отправить форму">
+            <div class="form__tip">
+              <span> — обязательные <span class="form__tip--extra">для заполнения</span> поля</span>
+            </div>
           </div>
-          <div class="form__comment">
-            <h2 class="form__question">Опишите свои эмоции</h2>
-            <textarea name="comment" rows="6" class="form__field" cols="30">Можно прям в красках, не стесняясь в выражениях</textarea>
-          </div>
-          <input type="submit" class="btn__form" value="Отправить форму">
-          <p class="form__tip"> — обязательные поля</p>
         </form>
       </section>
     </main>
     <footer class="site-footer">
-      <div class="site-footer__logo">
-        <img src="http://placehold.it/147x40" alt="Pink">
+      <div class="site-footer__wrapper">
+        <div class="site-footer__logo">
+          <img src="http://placehold.it/147x40" alt="Pink">
+        </div>
+        <div class="site-footer__social">
+          <a href="#" class="btn__social btn__social--twitter">Twitter</a>
+          <a href="#" class="btn__social btn__social--facebook">Facebook</a>
+          <a href="#" class="btn__social btn__social--youtube">Youtube</a>
+        </div>
+        <span class="site-footer__credit">Разработано <a href="https://htmlacademy.ru/" class="btn__academy" target="_blank">HTML academy</a></span>
       </div>
-      <div class="site-footer__social">
-        <a href="#" class="btn__social btn__social--twitter">Twitter</a>
-        <a href="#" class="btn__social btn__social--facebook">Facebook</a>
-        <a href="#" class="btn__social btn__social--youtube">Youtube</a>
-      </div>
-      <span class="site-footer__credit">Разработано <a href="https://htmlacademy.ru/" class="btn__academy" target="_blank">HTML academy</a></span>
     </footer>
   </body>
 </html>
