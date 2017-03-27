@@ -1,14 +1,40 @@
 .map {
   width: 320px;
+  height: 200px;
+
+  &::before {
+    content: "";
+    position: relative;
+    top: 50px;
+    width: 0;
+    height: 0;
+    border-right: 160px solid transparent;
+    border-left: 160px solid transparent;
+    border-top: 30px solid #ffffff;
+
+    @media @tablet-width {
+      top: 95px;
+      border-right: 330px solid transparent;
+      border-left: 330px solid transparent;
+      border-top: 75px solid #ffffff;
+    }
+
+    @media @desktop-width {
+      top: 120px;
+      border-right: 480px solid transparent;
+      border-left: 480px solid transparent;
+      border-top: 100px solid #ffffff;
+    }
+  }
 
   @media @tablet-width {
-    margin-left: -15px;
-    width: 690px;
+    width: 660px;
+    height: 380px;
   }
 
   @media @desktop-width {
-    margin-left: -120px;
-    width: 1200px;
+    width: 960px;
+    height: 500px;
   }
 }
 

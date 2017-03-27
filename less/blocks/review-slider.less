@@ -1,35 +1,97 @@
 .review-slider {
   .container();
   position: relative;
-  padding-top: 50px;
+  padding-top: 45px;
   line-height: 30px;
   background-color: #ffffff;
-  &::after {
-    .oblique();
-    bottom: 25px;
 
-    @media @desktop-width {
-      top: 75px;
-    }
+  @media @tablet-width {
+    padding-top: 10px;
   }
 
   @media @desktop-width {
-    padding-bottom: 100px;
+    padding: 0;
   }
 }
+
+.review-slider__wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  @media @desktop-width {
+    padding-top: 170px;
+  }
+}
+
+.review-slider__arrow {
+  display: none;
+
+  @media @desktop-width {
+    display: block;
+    width: 30px;
+    height: 30px;
+    margin-top: 50px;
+    font-size: 0;
+    border-width: 2px;
+    border-top-width: 0;
+    border-right-width: 0;
+    border-style: solid;
+    border-color: fade(@menu-color, 30%);
+    outline: none;
+    background-color: transparent;
+
+    &--left {
+      transform: rotate(45deg);
+    }
+
+    &--right {
+      transform: rotate(225deg);
+    }
+
+    &:hover {
+      cursor: pointer;
+      border-color: fade(@menu-color, 60%);
+    }
+    &:active {
+      border-color: fade(@menu-color, 10%);
+    }
+  }
+}
+
 .review-slider__review {
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px;
   text-align: center;
 
   &:nth-child(n+2) {
     display: none;
   }
+
+  @media @tablet-width {
+    flex-direction: column-reverse;
+  }
+  @media @desktop-width {
+    margin: auto;
+    width: 700px;
+  }
 }
+
+.review-slider__name-job-wrap {
+  @media @tablet-width {
+    margin-top: 20px;
+  }
+}
+
 .review-slider__name {
   font-size: 18px;
   font-weight: bold;
   color: #000000;
 
   @media @tablet-width {
+    margin-top: 20px;
     font-size: 20px;
   }
 }
@@ -43,23 +105,14 @@
   }
 }
 
-.review-slider__name-job-wrap {
-  @media @tablet-width {
-    position: absolute;
-    width: 100%;
-    top: 200px;
-    left: 0;
-  }
-
-  @media @desktop-width {
-    top: 170px;
-  }
-}
-
 .review-slider__text {
+  padding: 18px 0;
   font-size: 14px;
 
   @media @tablet-width {
     font-size: 18px;
+  }
+  @media @desktop-width {
+    quotes: none;
   }
 }
