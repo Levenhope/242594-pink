@@ -1,18 +1,58 @@
 .paginator {
-  width: 80px;
-  margin: 25px auto;
+  width: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 
   &--review-slider {
+    margin: 0 auto;
+    padding: 10px 0 25px;
+
     @media @tablet-width {
-      margin-top: 140px;
+      padding: 20px 0 10px;
     }
+
     @media @desktop-width {
       display: none;
     }
   }
   &--pay-plans {
+    margin: 0 auto;
+    padding: 35px 0 40px;
+
     @media @tablet-width {
       display: none;
     }
+  }
+}
+
+.paginator__radio {
+  display: none;
+
+  &:checked + .paginator__label {
+    margin: 0;
+    border: 3px solid @menu-color;
+    background-color: #ffffff;
+  }
+
+  &:active + .paginator__label {
+    border: none;
+    background-color: fade(@menu-color, 10%);
+  }
+}
+
+.paginator__label {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  margin: 3px;
+  border-radius: 100%;
+  background-color: fade(@menu-color, 30%);
+
+  &:hover {
+    cursor: pointer;
+    border: none;
+    background-color: fade(@menu-color, 60%);
   }
 }

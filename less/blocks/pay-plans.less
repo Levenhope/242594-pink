@@ -2,25 +2,40 @@
   .container();
   overflow: hidden;
   background-color: @light-color;
+  &::before {
+    .oblique();
+  }
+  @media @tablet-width {
+    width: 100%;
+  }
 }
 
 .pay-plans__wrapper {
-  margin-left: -245px;
-  padding-top: 50px;
-  width: 270px * 3;
-  padding-bottom: 20px;
+  margin-left: -250px;
+  padding-top: 60px;
+  width: 275px * 3;
   background-color: @light-color;
 
   @media @tablet-width {
     width: 100%;
     margin-left: 0;
+    padding-top: 80px;
+    padding-bottom: 70px;
+  }
+  @media @desktop-width {
+    padding-top: 140px;
+    padding-bottom: 95px;
   }
 }
 
 .pay-plans__table {
   margin: auto;
+  border-collapse: collapse;
   @media @tablet-width {
     max-width: 620px;
+  }
+  @media @desktop-width {
+    max-width: 940px;
   }
 }
 
@@ -28,17 +43,77 @@
   height: 95px;
   vertical-align: middle;
   color: #ffffff;
+  border-bottom: none;
   background-color: @menu-color;
-  &--hit {}
+  &:nth-child(2) {
+    border-right: 2px solid @light-color;
+    border-radius: 2px 0 0 2px;
+  }
+  &:last-child {
+    border-left: 2px solid @light-color;
+    border-radius: 0 2px 2px 0;
+  }
+  &--hit {
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -2px;
+      display: block;
+      width: 74px;
+      height: 73px;
+      background-image: url("../../img/bg-hit.svg");
+      background-repeat: no-repeat;
+
+      @media @tablet-width {
+        left: 0;
+        width: 62px;
+        height: 60px;
+        background-position: -8px -8px;
+      }
+      @media @desktop-width {
+        left: -2px;
+        width: 74px;
+        height: 73px;
+        background-position: 0;
+      }
+    }
+    &::after{
+      content: "Хит";
+      position: absolute;
+      left: 11px;
+      top: 14px;
+      font-weight: normal;
+      text-transform: uppercase;
+      color: #ffffff;
+      transform: rotate(-45deg);
+
+      @media @tablet-width {
+        left: 3px;
+        top: 7px;
+      }
+      @media @desktop-width {
+        left: 11px;
+        top: 14px;
+      }
+    }
+  }
   &--empty {
     display: none;
     @media @tablet-width {
       display: table-cell;
       visibility: hidden;
+      border-right: none;
+      border-bottom: 2px solid @field-color;
     }
   }
   @media @tablet-width {
     min-width: 155px;
+    height: 75px;
+  }
+  @media @desktop-width {
+    height: 95px;
   }
 }
 .pay-plans__name {
@@ -61,17 +136,24 @@
   @media @tablet-width {
     font-size: 18px;
   }
+  @media @desktop-width {
+    font-size: 24px;
+  }
 }
 
 .pay-plans__service {
   width: 275px;
-  padding: 20px;
+  padding: 15px 20px;
+  border: 2px solid @field-color;
   background-color: #ffffff;
   &--outstand {
     display: none;
     @media @tablet-width {
       display: table-cell;
-      padding: 0 15px;
+      padding: 6px 15px;
+    }
+    @media @desktop-width {
+      padding: 15px 25px;
     }
   }
 }
@@ -86,9 +168,12 @@
 
   @media @tablet-width {
     display: none;
+    text-transform: capitalize;
     &--outstand {
       display: inline;
-      text-transform: capitalize;
     }
+  }
+  @media @desktop-width {
+    font-size: 18px;
   }
 }

@@ -1,26 +1,30 @@
 .effect {
-  .container();
   .clearfix();
   display: none;
   background-color: #ffffff;
 
   @media @tablet-width {
     display: block;
+    padding: 95px 0;
   }
   @media @desktop-width {
+    padding: 110px 0;
     background-color: @light-color;
   }
 }
 
 .effect__wrapper {
-  position: relative;
-  width: 350px;
+  .container();
+}
 
-  @media @tablet-width {
-    float: right;
-  }
+.effect__content {
+  position: relative;
+  width: 330px;
+  float: right;
+
   @media @desktop-width {
-    width: 520px;
+    width: 530px;
+    margin-right: 40px;
   }
 }
 
@@ -38,13 +42,13 @@
 
 .effect__text {
   display: block;
-  width: 296px;
   font-size: 14px;
   line-height: 24px;
   color: @menu-color;
 
   @media @desktop-width {
-    width: auto;
+    font-size: 18px;
+    line-height: 30px;
   }
 }
 

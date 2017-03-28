@@ -1,28 +1,31 @@
 .download-app {
   .container();
+  @media @tablet-width {
+    height: 0;
+  }
 }
 
 .download-app__wrapper{
   width: 320px;
   margin: auto;
   padding-top: 25px;
+  overflow: auto;
   background-color: @dark-color;
   a {
     color: #ffffff;
   }
 
   @media @tablet-width {
-    position: absolute;
+    position: relative;
     z-index: 1;
-    top: 380px;
-    margin-left: 40px;
+    top: -580px;
+    margin-left: 30px;
     width: 300px;
-    height: 595px;
     background-color: transparent;
   }
 
   @media @desktop-width {
-    top: 150px;
+    top: -680px;
   }
 }
 
@@ -35,25 +38,34 @@
   color: #ffffff;
 
   @media @tablet-width {
-    display: inline-block;
-    margin: 30px;
+    display: block;
+    width: 190px;
+    margin: 30px auto;
   }
 
   @media @desktop-width {
-    margin: 60px;
+    margin: 60px auto;
   }
 }
 
 .download-app__markets {
-  padding: 25px 40px;
+  padding: 25px 0 5px;
+  text-align: center;
 
+  a {
+    padding: 0 15px;
+  }
+
+  @media @tablet-width {
+    padding: 50px 0 15px;
+  }
   @media @desktop-width {
-    padding: 40px;
+    padding: 35px 0 30px;
   }
 }
 
 .download-app__text {
-  padding: 0 40px 25px;
+  padding: 0 40px 20px;
   font-size: 14px;
   font-weight: lighter;
   line-height: 24px;
