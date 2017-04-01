@@ -11,7 +11,7 @@
   text-align: center;
   border-width: 3px;
   border-style: solid;
-  border-radius: 30px;
+  border-radius: 25px;
   outline: none;
   cursor: pointer;
 
@@ -32,6 +32,10 @@
     &:active {
       color: fade(@accent-color, 30%);
       background-color: #ffffff;
+    }
+
+    @media @desktop-width {
+      font-size: 21px;
     }
   }
   &--pink {
@@ -62,15 +66,18 @@
     }
   }
   &--editor {
-    margin: 10px auto;
+    width: 277px;
+    height: 56px;
+    border-radius: 28px;
+    margin: 12px auto;
 
     @media @tablet-width {
       width: 260px;
-      margin: 20px auto 0;
+      margin: 23px 0 0;
     }
     @media @desktop-width {
       width: 180px;
-      margin: 0;
+      margin-right: -20px;
     }
   }
 }
@@ -85,7 +92,7 @@
   width: 280px;
   font-size: 18px;
   font-weight: bold;
-  line-height: 30px;
+  line-height: 24px;
   text-transform: uppercase;
   color: #ffffff;
   border: none;
@@ -106,6 +113,10 @@
     background-color: @field-color;
   }
 
+  @media @tablet-width {
+      width: 300px;
+  }
+
   @media @desktop-width {
     &--widing {
       width: 460px;
@@ -114,33 +125,48 @@
 }
 
 .btn__social {
-  display: inline-block;
-  width: 50px;
-  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45px;
+  height: 45px;
+  margin: 0 6px;
   font-size: 0;
   border: 3px solid fade(@menu-color, 10%);
   border-radius: 100%;
-  background-repeat: no-repeat;
-  background-position: center;
-  &--twitter {
-    background-image: url("../../img/icon-twitter.svg");
+
+  &:hover {
+    border-color: @menu-color;
   }
-  &--facebook {
-    background-image: url("../../img/icon-facebook.svg");
-    margin: 0 10px;
+  &:active {
+    border-color: fade(@menu-color, 10%);
+    & .btn__svg-social {
+      fill: fade(@accent-color, 10%);
+    }
   }
-  &--youtube {
-    background-image: url("../../img/icon-youtube.svg");
+  @media @tablet-width {
+    margin: 0 12px 0 0;
   }
 }
 
+.btn__svg-social {
+  fill: @accent-color;
+}
+
 .btn__academy {
-  font-size: 0;
-  display: inline-block;
-  float: right;
-  width: 27px;
-  height: 34px;
   margin-left: 15px;
-  background-image: url("../../img/logo-htmlacademy.svg");
-  background-repeat: no-repeat;
+  font-size: 0;
+  outline: none;
+}
+
+.btn__svg-academy {
+  display: block;
+  vertical-align: middle;
+  fill: @accent-color;
+  &:hover {
+    fill: #000000;
+  }
+  &:active {
+    fill: fade(#000000, 30%);
+  }
 }

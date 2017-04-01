@@ -1,19 +1,31 @@
 .site-footer {
-  padding: 40px;
+  padding: 25px 0;
   background-color: #ffffff;
-  &--hide {
+  &--photo {
+    padding: 40px 0;
+  }
+  &--index {
     display: none;
   }
 
   @media @tablet-width {
-    padding: 40px 0;
-    &--hide {
+    padding: 55px 0;
+    &--photo {
+      padding: 40px 0;
+    }
+    &--index {
       display: block;
     }
   }
 
   @media @desktop-width {
-    padding: 70px 10px;
+    padding: 61px 10px;
+    &--index {
+      padding: 80px 10px;
+    }
+    &--photo {
+      padding: 105px 0;
+    }
   }
 }
 
@@ -27,18 +39,49 @@
   @media @tablet-width {
     flex-direction: row;
     justify-content: space-between;
+    width:620px;
+  }
+  @media @desktop-width {
+    width: 940px;
   }
 }
 
 .site-footer__logo {
-  margin-left: 20px;
-
+  svg {
+    fill: @menu-color;
+    vertical-align: middle;
+    &:hover {
+      fill: @accent-color;
+    }
+    &:active {
+      fill: @menu-color;
+      opacity: 0.3;
+    }
+  }
+  @media @tablet-width {
+    margin-top: -10px;
+  }
   @media @desktop-width {
-    margin-left: 0;
+    margin-right: 20px;
+  }
+}
+
+.site-footer__logo-glases {
+  @media @desktop-width {
+    display: none;
+  }
+}
+
+.site-footer__logo-stars {
+  display: none;
+  @media @desktop-width {
+    display: block;
   }
 }
 
 .site-footer__social {
+  display: flex;
+  flex-direction: row;
   margin: 30px auto 40px;
 
   @media @tablet-width {
@@ -47,7 +90,16 @@
 }
 
 .site-footer__credit {
-  margin-right: 20px;
-  line-height: 34px;
-  vertical-align: middle;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  span {
+    line-height: 18px;
+    font-size: 14px;
+    @media @desktop-width {
+      line-height: 21px;
+      font-size: 18px;
+    }
+  }
 }

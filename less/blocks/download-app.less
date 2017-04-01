@@ -17,15 +17,15 @@
 
   @media @tablet-width {
     position: relative;
-    z-index: 1;
     top: -580px;
-    margin-left: 30px;
+    margin-left: 20px;
     width: 300px;
     background-color: transparent;
   }
 
   @media @desktop-width {
-    top: -680px;
+    top: -707px;
+    margin-left: 12px;
   }
 }
 
@@ -44,28 +44,35 @@
   }
 
   @media @desktop-width {
-    margin: 60px auto;
+    width: auto;
+    margin: 50px auto;
+    font-size: 50px;
+    line-height: 60px;
   }
 }
 
 .download-app__markets {
-  padding: 25px 0 5px;
-  text-align: center;
+  padding: 32px 57px 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
 
-  a {
-    padding: 0 15px;
+  img {
+    display: block;
+    vertical-align: top;
   }
 
   @media @tablet-width {
-    padding: 50px 0 15px;
+    padding: 45px 47px 18px;
   }
   @media @desktop-width {
-    padding: 35px 0 30px;
+    padding: 66px 50px 38px;
   }
 }
 
 .download-app__text {
-  padding: 0 40px 20px;
+  padding: 0 40px 15px;
   font-size: 14px;
   font-weight: lighter;
   line-height: 24px;

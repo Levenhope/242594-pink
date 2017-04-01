@@ -1,20 +1,28 @@
 .contacts {
-  .container();
   background-color: #ffffff;
+}
+
+.contacts__main {
+  .container();
 }
 
 .contacts__heading {
   overflow: auto;
+  padding: 5px 0 3px;
   font-size: 24px;
   font-weight: 100;
+  line-height: 28px;
   text-align: center;
   color: @menu-color;
 
   @media @tablet-width {
     font-size: 40px;
+    line-height: 48px;
   }
   @media @desktop-width {
+    padding: 15px 0 8px;
     font-size: 50px;
+    line-height: 57px;
   }
 }
 
@@ -41,7 +49,7 @@
 }
 
 .contacts__item {
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 
   @media @tablet-width {
     &--phone {
@@ -71,23 +79,19 @@
 
 .contacts__text {
   display: block;
+  margin-bottom: 5px;
   font-size: 18px;
   font-weight: bold;
   color: @menu-color;
 
-  &--place {
-    @media @tablet-width {
-      margin-bottom: 5px;
-    }
-  }
-
   @media @desktop-width {
-    margin-bottom: 30px;
+    margin-bottom: 25px;
   }
 }
 
 .contacts__link {
   font-size: 24px;
+  line-height: 30px;
   font-weight: lighter;
   text-decoration: none;
   color: @accent-color;
