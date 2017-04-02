@@ -1,40 +1,31 @@
 .map {
-  width: 320px;
-  height: 200px;
+  position: relative;
+  width: 100%;
+  height: 220px;
+  margin-top: -10px;
 
   &::before {
     content: "";
-    position: relative;
-    top: 50px;
-    width: 0;
-    height: 0;
-    border-right: 160px solid transparent;
-    border-left: 160px solid transparent;
-    border-top: 30px solid #ffffff;
-
-    @media @tablet-width {
-      top: 95px;
-      border-right: 330px solid transparent;
-      border-left: 330px solid transparent;
-      border-top: 75px solid #ffffff;
-    }
-
-    @media @desktop-width {
-      top: 120px;
-      border-right: 480px solid transparent;
-      border-left: 480px solid transparent;
-      border-top: 100px solid #ffffff;
-    }
+    display: block;
+    position: absolute;
+    top: -1px;
+    width: 100%;
+    height: 130px;
+    background-image: url("../img/bg-triangle-white-footer.svg");
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: contain;
+    pointer-events: none;
   }
 
   @media @tablet-width {
-    width: 660px;
     height: 380px;
+    margin-top: -20px;
   }
 
   @media @desktop-width {
-    width: 960px;
     height: 500px;
+    margin-top: -10px;
   }
 }
 
@@ -44,10 +35,10 @@
   border: none;
 
   @media @tablet-width {
-    height: 380px;
+    height: 375px;
   }
 
   @media @desktop-width {
-    height: 500px;
+    height: 480px;
   }
 }

@@ -11,19 +11,19 @@
 }
 
 .pay-plans__wrapper {
-  margin-left: -250px;
-  padding-top: 60px;
-  width: 275px * 3;
+  margin-left: -255px;
+  padding-top: 92px;
+  width: 277px * 3;
   background-color: @light-color;
 
   @media @tablet-width {
     width: 100%;
     margin-left: 0;
-    padding-top: 80px;
+    padding-top: 86px;
     padding-bottom: 70px;
   }
   @media @desktop-width {
-    padding-top: 140px;
+    padding-top: 155px;
     padding-bottom: 95px;
   }
 }
@@ -40,10 +40,10 @@
 }
 
 .pay-plans__plan {
-  height: 95px;
+  padding: 18px 0;
   vertical-align: middle;
   color: #ffffff;
-  border-bottom: none;
+  border-bottom: 2px solid @menu-color;
   background-color: @menu-color;
   &:nth-child(2) {
     border-right: 2px solid @light-color;
@@ -63,7 +63,7 @@
       display: block;
       width: 74px;
       height: 73px;
-      background-image: url("../../img/bg-hit.svg");
+      background-image: url("../img/bg-hit.svg");
       background-repeat: no-repeat;
 
       @media @tablet-width {
@@ -73,7 +73,6 @@
         background-position: -8px -8px;
       }
       @media @desktop-width {
-        left: -2px;
         width: 74px;
         height: 73px;
         background-position: 0;
@@ -82,8 +81,8 @@
     &::after{
       content: "Хит";
       position: absolute;
-      left: 11px;
-      top: 14px;
+      left: 6px;
+      top: 16px;
       font-weight: normal;
       text-transform: uppercase;
       color: #ffffff;
@@ -109,21 +108,25 @@
     }
   }
   @media @tablet-width {
-    min-width: 155px;
-    height: 75px;
+    min-width: 152px;
+    padding: 10px 0 12px;
   }
   @media @desktop-width {
-    height: 95px;
+    padding: 16px 0 18px;
   }
 }
 .pay-plans__name {
   font-size: 18px;
   font-weight: bold;
-  line-height: 30px;
+  line-height: 37px;
   text-transform: uppercase;
 
   @media @tablet-width {
     font-size: 16px;
+  }
+  @media @desktop-width {
+    font-size: 18px;
+    line-height: 30px;
   }
 }
 .pay-plans__cost {
@@ -135,45 +138,57 @@
 
   @media @tablet-width {
     font-size: 18px;
+    line-height: 18px;
   }
   @media @desktop-width {
     font-size: 24px;
+    line-height: 30px;
   }
 }
 
 .pay-plans__service {
   width: 275px;
   padding: 15px 20px;
-  border: 2px solid @field-color;
-  background-color: #ffffff;
-  &--outstand {
-    display: none;
-    @media @tablet-width {
-      display: table-cell;
-      padding: 6px 15px;
-    }
-    @media @desktop-width {
-      padding: 15px 25px;
-    }
-  }
-}
-
-.pay-plans__include {
   font-size: 14px;
   line-height: 30px;
   text-transform: uppercase;
   color: @menu-color;
-  &--true {}
-  &--false {}
+  border: 1px solid @field-color;
+  background-color: #ffffff;
 
-  @media @tablet-width {
+  &--outstand {
     display: none;
-    text-transform: capitalize;
-    &--outstand {
-      display: inline;
+    @media @tablet-width {
+      display: table-cell;
+    }
+    @media @desktop-width {
+      width: 255px;
     }
   }
+
+  @media @tablet-width {
+    padding: 8px 15px;
+    text-transform: none;
+  }
   @media @desktop-width {
+    padding: 15px 22px;
     font-size: 18px;
+    border-width: 2px;
+  }
+}
+
+.pay-plans__service-name {
+  @media @tablet-width {
+    display: none;
+  }
+}
+
+.pay-plans__include {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  @media @tablet-width {
+    justify-content: center;
   }
 }

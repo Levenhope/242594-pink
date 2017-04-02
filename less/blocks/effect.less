@@ -5,26 +5,74 @@
 
   @media @tablet-width {
     display: block;
-    padding: 95px 0;
+    padding: 60px 0;
   }
   @media @desktop-width {
-    padding: 110px 0;
+    padding: 31px 0 68px;
     background-color: @light-color;
   }
 }
 
 .effect__wrapper {
   .container();
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 238px;
+    height: 276px;
+    margin-left: 20px;
+    background-image: url("../img/icon-timer.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    opacity: 0.13;
+
+    @media @desktop-width {
+      width: 298px;
+      height: 345px;
+      margin-left: 13px;
+    }
+  }
+  &::after {
+    content: "24";
+    display: block;
+    position: absolute;
+    top: 55px;
+    left: 39px;
+    width: 175px;
+    height: 175px;
+    font-size: 96px;
+    font-weight: bold;
+    line-height: 160px;
+    text-align: center;
+    color: @accent-color;
+    border: 14px solid @accent-color;
+    border-radius: 100%;
+
+    @media @desktop-width {
+      top: 70px;
+      left: 33px;
+      width: 220px;
+      height: 220px;
+      font-size: 120px;
+      line-height: 205px;
+      border-width: 17px;
+    }
+  }
 }
 
 .effect__content {
-  position: relative;
   width: 330px;
-  float: right;
+  margin-top: 35px;
 
   @media @desktop-width {
     width: 530px;
-    margin-right: 40px;
+    margin-top: 92px;
+    margin-right: 55px;
   }
 }
 
@@ -42,11 +90,13 @@
 
 .effect__text {
   display: block;
+  margin: 11px 0;
   font-size: 14px;
   line-height: 24px;
   color: @menu-color;
 
   @media @desktop-width {
+    margin: 21px 0 31px;
     font-size: 18px;
     line-height: 30px;
   }
@@ -61,5 +111,10 @@
   }
   &:active{
     color: @menu-color;
+  }
+
+  @media @desktop-width {
+    font-size: 18px;
+    line-height: 30px;
   }
 }

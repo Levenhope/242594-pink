@@ -18,7 +18,7 @@
 
 .form__intro {
   margin: auto;
-  padding: 50px 20px 26px;
+  padding: 44px 20px 13px;
   font-size: 14px;
   line-height: 30px;
   text-align: center;
@@ -31,13 +31,13 @@
 
   @media @tablet-width {
     width: 500px;
-    padding-top: 95px;
+    padding-top: 92px;
     font-size: 18px;
   }
 
   @media @desktop-width {
     width: 770px;
-    padding-bottom: 40px;
+    padding-bottom: 60px;
     br {
       display: none;
     }
@@ -45,11 +45,10 @@
 }
 
 .form__fieldset-wrap {
-  padding-top: 35px;
 
   &--name {
     padding-top: 0;
-    padding-bottom: 20px;
+    padding-bottom: 25px;
     order: 1;
     @media @tablet-width {
       padding:0;
@@ -59,6 +58,7 @@
     }
   }
   &--achieve {
+    padding-top: 35px;
     order: 2;
     background-color: @light-color;
 
@@ -71,13 +71,15 @@
   }
   &--contact {
     order: 3;
-    padding-top: 10px;
+    padding-top: 15px;
     padding-bottom: 20px;
     @media @desktop-width {
       flex-grow: 1;
     }
   }
   &--app {
+    padding-top: 42px;
+    padding-bottom: 5px;
     order: 4;
     background-color: @light-color;
 
@@ -86,6 +88,7 @@
     }
   }
   &--comment {
+    padding-top: 39px;
     order: 5;
     @media @desktop-width {
       flex-grow: 1;
@@ -105,8 +108,8 @@
   padding-bottom: 20px;
 
   @media @tablet-width {
-    margin: 25px 10px;
-    padding: 20px 55px;
+    margin: 33px 19px;
+    padding: 20px 60px;
     border-radius: 2px;
     border: 2px solid @field-color;
   }
@@ -128,8 +131,12 @@
     }
   }
   &--app {
+    padding-top: 35px;
+    padding-bottom: 0;
     @media @tablet-width {
-      margin-top: 5px;
+      margin-top: 0;
+      padding-top: 44px;
+      padding-bottom: 17px;
     }
     @media @desktop-width {
       padding-right: 0;
@@ -137,30 +144,46 @@
     }
   }
   &--contact {
+    padding-bottom: 10px;
     @media @tablet-width {
-      padding-bottom: 10px;
+      margin-top: 25px;
+      margin-bottom: 24px;
+      padding-top: 27px;
+      padding-bottom: 7px;
     }
     @media @desktop-width {
+      margin-top: 34px;
       padding-left: 60px;
       padding-right: 60px;
       padding-bottom: 0;
-      padding-top: 30px;
+      padding-top: 34px;
     }
   }
   &--achieve {
+    padding-top: 40px;
+    padding-bottom: 0;
+    @media @tablet-width {
+      padding-top: 44px;
+      padding-bottom: 5px;
+      margin-bottom: 24px;
+    }
     @media @desktop-width {
-      padding-top: 25px;
-      padding-right: 0;
+      margin-top: 34px;
+      padding-top: 45px;
+      padding-right: 50px;
       padding-left: 60px;
-      padding-bottom: 35px;
+      padding-bottom: 13px;
     }
   }
   &--comment {
+    padding-top: 16px;
+    padding-bottom: 44px;
     @media @tablet-width {
-      padding: 35px 55px 45px;
+      padding: 35px 57px 45px;
     }
     @media @desktop-width {
-      padding: 30px 60px 40px;
+      margin-top: 33px;
+      padding: 33px 60px 40px;
     }
   }
 }
@@ -196,6 +219,9 @@
   flex-direction: column;
   position: relative;
 
+  &--contact {
+    padding-bottom: 7px;
+  }
   @media @tablet-width {
     &--name {
       flex-direction: row;
@@ -206,31 +232,49 @@
     &--contact {
       flex-direction: column-reverse;
       justify-content: space-between;
-      padding: 10px 0;
-    }
-  }
+      padding: 9px 0;
 
-  @media @desktop-width {
-    &--name:first-child{
-      padding-top: 10px;
-    }
-    &--name:last-child{
-      padding-bottom: 0;
-    }
-    &--contact {
-      width: 375px;
-      padding: 0;
-
-      ::after {
+      &::after {
         content: "";
         display: block;
         position: absolute;
-        bottom: 52px;
-        left: 375px-62;
+        top: 11px;
+        left: 498px-62;
         width: 60px;
         height: 60px;
         border-radius: 0 2px 2px 0;
         background-color: @field-color;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+      &--phone {
+        &::after {
+          background-image: url("../img/icon-phone.svg");
+        }
+      }
+      &--email {
+        &::after {
+          background-image: url("../img/icon-mail.svg");
+        }
+      }
+    }
+  }
+
+  @media @desktop-width {
+    &--name {
+      &:first-child {
+        padding-top: 15px;
+      }
+      &:last-child {
+        padding-bottom: 0;
+      }
+    }
+    &--contact {
+      width: 375px;
+      padding: 0;
+      &::after {
+        top: 2px;
+        left: 375px-62;
       }
     }
   }
@@ -238,12 +282,14 @@
 
 .form__field-label {
   display: block;
-  padding: 15px 20px 0;
+  padding: 15px 20px 5px;
   font-size: 14px;
   line-height: 30px;
   text-transform: uppercase;
   color: @accent-color;
-
+  &--contact {
+    padding: 10px 20px 5px;
+  }
   @media @tablet-width {
     &--name {
       padding: 0 20px 0 0;
@@ -283,10 +329,10 @@
   max-height: 200px;
   overflow: auto;
     @media @tablet-width {
-      max-height: 190px;
+      max-height: 195px;
     }
     @media @desktop-width {
-      max-height: 125px;
+      max-height: 127px;
     }
   }
 }
@@ -299,18 +345,24 @@
       justify-content: space-between;
     }
     &--achieve {
-      max-height: 158px;
+      max-height: 165px;
       display: flex;
       flex-direction: column;
       flex-wrap: wrap;
       justify-content: space-between;
+      align-content: space-between;
     }
   }
 }
 
 .form__list-item {
   position: relative;
-  padding: 20px 0;
+  &--achieve {
+    padding-bottom: 43px;
+  }
+  &--app {
+    padding-bottom: 36px;
+  }
 }
 
 .form__list-label {
@@ -330,6 +382,9 @@
     border-radius: 3px;
     background-color: #ffffff;
 
+    @media @tablet-width {
+      margin-right: 20px;
+    }
     @media @desktop-width {
       margin-right: 20px;
     }
@@ -399,7 +454,7 @@
   align-items: center;
 
   @media @tablet-width {
-    margin: 40px 10px;
+    margin: 35px 19px;
     flex-direction: row;
     flex-grow: 1;
     justify-content: space-between;
@@ -412,7 +467,7 @@
 }
 
 .form__tip {
-  padding: 30px;
+  padding: 33px;
   font-size: 14px;
   line-height: 30px;
   text-align: center;
