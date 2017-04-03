@@ -137,6 +137,16 @@
   border: none;
   outline: none;
 
+  &::-ms-fill-lower,  
+  ::-ms-fill-upper {  
+    background: transparent;  
+  }  
+  &::-ms-track {
+    height: 2px;  
+    border: none;  
+    background-color: @menu-color;  
+  }
+
   &::-moz-range-track {
     height: 1px;
     background-color: @menu-color;
@@ -156,6 +166,15 @@
     }
   }
 
+  &::-ms-thumb {
+    width: 13px;
+    height: 13px;
+    border: 2px solid @accent-color;
+    border-radius: 100%;
+    background-color: @light-color;
+    cursor: pointer;
+  }
+  
   &::-moz-range-thumb {
     width: 13px;
     height: 13px;
