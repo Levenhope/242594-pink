@@ -1,11 +1,10 @@
 .download-app {
   .container();
-  @media @tablet-width {
-    height: 0;
-  }
 }
 
 .download-app__wrapper{
+  position: relative;
+  z-index: 2;
   width: 320px;
   margin: auto;
   padding-top: 25px;
@@ -16,15 +15,14 @@
   }
 
   @media @tablet-width {
-    position: relative;
-    top: -580px;
+    margin-top: -580px;
     margin-left: 20px;
     width: 300px;
     background-color: transparent;
   }
 
   @media @desktop-width {
-    top: -707px;
+    margin-top: -707px;
     margin-left: 12px;
   }
 }
@@ -74,7 +72,7 @@
 .download-app__text {
   padding: 0 40px 15px;
   font-size: 14px;
-  font-weight: lighter;
+  font-weight: 100;
   line-height: 24px;
   color: #ffffff;
   text-align: center;

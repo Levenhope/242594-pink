@@ -76,7 +76,6 @@
   margin: 0;
   padding: 80px 23px 0;
   list-style: none;
-  background-color: @light-color;
   &::after {
     content: "";
     display: block;
@@ -120,6 +119,7 @@
   }
   @media @desktop-width {
     flex-direction: row;
+    align-content: flex-start;
     padding: 270px 0 15px;
     margin: 0;
   }
@@ -178,7 +178,7 @@
 
 .promo__heading {
   font-size: 18px;
-  font-weight: bold;
+  font-weight: 700;
   color: #000000;
 
   @media @desktop-width {
