@@ -93,6 +93,7 @@
 }
 
 .main-nav__switch {
+  display: block;
   position: relative;
   width: 24px;
   height: 24px;
@@ -101,6 +102,9 @@
   outline: none;
   background-color: transparent;
   cursor: pointer;
+  &--nojs {
+    display: none;
+  }
   &--open {
     &::before {
       content: "";

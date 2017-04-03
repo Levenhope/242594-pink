@@ -1,6 +1,14 @@
 .site-header {
   color: #ffffff;
   background-color: @dark-color;
+  &--index {
+    @media @tablet-width {
+      height: 727px;
+    }
+    @media @desktop-width {
+      height: 853px;
+    }
+  }
 }
 
 .site-header__heading {

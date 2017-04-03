@@ -128,7 +128,7 @@
   }
 }
 
-.editor__range {
+.editor__range  {
   -webkit-appearance: none;
   width: 235px;
   height: 2px;
@@ -136,6 +136,12 @@
   background-color: @menu-color;
   border: none;
   outline: none;
+
+  &::-moz-range-track {
+    height: 1px;
+    background-color: @menu-color;
+    border: none;
+  }
 
   &::-webkit-slider-thumb {
     -webkit-appearance: none;
@@ -148,6 +154,14 @@
     &:active {
       background-color: @accent-color;
     }
+  }
+
+  &::-moz-range-thumb {
+    width: 13px;
+    height: 13px;
+    border: 2px solid @accent-color;
+    border-radius: 100%;
+    background-color: @light-color;
   }
 
   &--hidden {
