@@ -113,7 +113,7 @@
       width: 22px;
     }
     &--contrast {
-    height: 17px;
+    height: 32px;
       svg {
         width: 17px;
       }
@@ -129,7 +129,7 @@
 }
 
 .editor__range  {
-  -webkit-appearance: none;
+  position: relative;
   width: 235px;
   height: 2px;
   margin: 30px auto;
@@ -137,49 +137,24 @@
   border: none;
   outline: none;
 
-  &::-ms-fill-lower,
-  ::-ms-fill-upper {
-    background: transparent;
-  }
-  &::-ms-track {
-    height: 2px;
-    border: none;
-    background-color: @menu-color;
-  }
-
-  &::-moz-range-track {
-    height: 1px;
-    background-color: @menu-color;
-    border: none;
-  }
-
-  &::-webkit-slider-thumb {
-    -webkit-appearance: none;
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -7px;
     width: 13px;
     height: 13px;
     border: 2px solid @accent-color;
     border-radius: 100%;
     background-color: @light-color;
+
+    &:hover {
+      cursor: pointer;
+    }
 
     &:active {
       background-color: @accent-color;
     }
-  }
-
-  &::-ms-thumb {
-    width: 13px;
-    height: 13px;
-    border: 2px solid @accent-color;
-    border-radius: 100%;
-    background-color: @light-color;
-    cursor: pointer;
-  }
-  &::-moz-range-thumb {
-    width: 13px;
-    height: 13px;
-    border: 2px solid @accent-color;
-    border-radius: 100%;
-    background-color: @light-color;
   }
 
   &--hidden {
