@@ -1,29 +1,31 @@
 .download-app {
+  position: relative;
+  z-index: 1;
   .container();
 }
 
 .download-app__wrapper{
-  position: relative;
-  z-index: 2;
   width: 320px;
-  margin: auto;
   padding-top: 25px;
-  overflow: auto;
   background-color: @dark-color;
   a {
     color: #ffffff;
   }
 
   @media @tablet-width {
+    float: left;
     margin-top: -580px;
     margin-left: 20px;
+    margin-bottom: 90px;
     width: 300px;
+    height: 100%;
     background-color: transparent;
   }
 
   @media @desktop-width {
-    margin-top: -707px;
-    margin-left: 12px;
+    margin-top: -710px;
+    margin-left: 10px;
+    margin-bottom: 105px;
   }
 }
 
@@ -65,7 +67,7 @@
     padding: 45px 47px 18px;
   }
   @media @desktop-width {
-    padding: 66px 50px 38px;
+    padding: 66px 48px 38px;
   }
 }
 

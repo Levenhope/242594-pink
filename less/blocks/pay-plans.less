@@ -12,14 +12,14 @@
 
 .pay-plans__wrapper {
   margin-left: -255px;
-  padding-top: 92px;
+  padding-top: 94px;
   width: 277px * 3;
   background-color: @light-color;
 
   @media @tablet-width {
     width: 100%;
     margin-left: 0;
-    padding-top: 86px;
+    padding-top: 88px;
     padding-bottom: 70px;
   }
   @media @desktop-width {
@@ -40,7 +40,7 @@
 }
 
 .pay-plans__plan {
-  padding: 15px 0;
+  padding: 15px 0 17px;
   vertical-align: middle;
   color: #ffffff;
   border-bottom: 2px solid @menu-color;
@@ -77,8 +77,8 @@
     &::after{
       content: "Хит";
       position: absolute;
-      left: 11px;
-      top: 15px;
+      left: 8px;
+      top: 16px;
       font-size: 14px;
       font-weight: normal;
       text-transform: uppercase;
@@ -109,17 +109,18 @@
     padding: 10px 0 12px;
   }
   @media @desktop-width {
-    padding: 16px 0 18px;
+    padding: 16px 0;
   }
 }
 .pay-plans__name {
   font-size: 18px;
   font-weight: 700;
-  line-height: 37px;
+  line-height: 33px;
   text-transform: uppercase;
 
   @media @tablet-width {
     font-size: 16px;
+    line-height: 36px;
   }
   @media @desktop-width {
     font-size: 18px;
@@ -139,13 +140,13 @@
   }
   @media @desktop-width {
     font-size: 24px;
-    line-height: 30px;
+    line-height: 33px;
   }
 }
 
 .pay-plans__service {
   width: 275px;
-  padding: 15px 20px;
+  padding: 15px 18px 15px 20px;
   font-size: 14px;
   line-height: 30px;
   text-transform: uppercase;
@@ -153,24 +154,25 @@
   border: 1px solid @field-color;
   background-color: #ffffff;
 
+  @media @tablet-width {
+    padding: 8px 15px;
+  }
+  @media @desktop-width {
+    padding: 17px 22px 13px;
+    border-width: 2px;
+  }
+
   &--outstand {
     display: none;
     @media @tablet-width {
       display: table-cell;
+      text-transform: none;
     }
     @media @desktop-width {
-      width: 255px;
+      width: 260px;
+      padding: 15px 22px;
+      font-size: 18px;
     }
-  }
-
-  @media @tablet-width {
-    padding: 8px 15px;
-    text-transform: none;
-  }
-  @media @desktop-width {
-    padding: 15px 22px;
-    font-size: 18px;
-    border-width: 2px;
   }
 }
 
@@ -184,6 +186,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
 
   @media @tablet-width {
     justify-content: center;

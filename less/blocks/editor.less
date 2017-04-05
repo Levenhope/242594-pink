@@ -3,7 +3,7 @@
   background-color: @light-color;
 
   @media @tablet-width {
-    padding: 55px 0;
+    padding: 57px 0 55px;
     min-height: 400px;
   }
   @media @desktop-width {
@@ -68,7 +68,7 @@
   justify-content: space-between;
   align-items: center;
   width: 205px;
-  margin: 35px auto 10px;
+  margin: 35px 55px 10px;
 
   @media @tablet-width {
     display: flex;
@@ -84,8 +84,8 @@
 }
 
 .editor__icon-btn {
-  width: 44px;
-  height: 44px;
+  width: 46px;
+  height: 46px;
   padding: 0;
   font-size: 0;
   border: none;
@@ -118,7 +118,7 @@
         width: 17px;
       }
     }
-    margin: -4px -7px 36px;
+    margin: -4px -8px 33px;
   }
   @media @desktop-width {
     width: 48px;
@@ -128,11 +128,11 @@
   }
 }
 
-.editor__range  {
+.editor__range {
   position: relative;
   width: 235px;
   height: 2px;
-  margin: 30px auto;
+  margin: 38px auto 40px;
   background-color: @menu-color;
   border: none;
   outline: none;
@@ -141,18 +141,55 @@
     content: "";
     display: block;
     position: absolute;
-    top: -7px;
-    width: 13px;
-    height: 13px;
+    top: -5px;
+    left: 188px;
+    width: 9px;
+    height: 9px;
     border: 2px solid @accent-color;
     border-radius: 100%;
     background-color: @light-color;
-
-    &:hover {
+  }
+  @media @tablet-width {
+    &:first-child {
+      &::before {
+        left: 146px;
+      }
+    }
+    &:nth-child(2) {
+      &::before {
+        left: 24px;
+      }
+    }
+    &:last-child {
+      &::before {
+        left: 96px;
+      }
+    }
+  }
+  @media @desktop-width {
+    &:first-child {
+      &::before {
+        left: 76px;
+      }
+    }
+    &:nth-child(2) {
+      &::before {
+        left: 252px;
+      }
+    }
+    &:last-child {
+      &::before {
+        left: 165px;
+      }
+    }
+  }
+  &:hover {
+    &::before {
       cursor: pointer;
     }
-
-    &:active {
+  }
+  &:active {
+    &::before {
       background-color: @accent-color;
     }
   }
@@ -169,7 +206,7 @@
     content: "";
     display: block;
     position: absolute;
-    left: 0;
+    left: -43px;
     width: 320px;
     height: 1px;
     margin-top: 35px;
@@ -188,7 +225,7 @@
   @media @tablet-width {
     display: block;
     width: 200px;
-    margin: 20px auto 71px;
+    margin: 20px auto 69px;
   }
   @media @desktop-width {
     width: 290px;
@@ -197,7 +234,7 @@
 }
 
 .editor__control {
-  padding: 30px 0;
+  padding: 20px 0 29px;
 
   @media @tablet-width {
     padding: 0;

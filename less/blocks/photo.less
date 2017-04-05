@@ -5,7 +5,7 @@
 
 .photo__promo {
   .container();
-  padding: 33px 0 43px;
+  padding: 34px 0 43px;
   font-size: 14px;
   line-height: 30px;
   text-align: center;
@@ -13,7 +13,7 @@
   @media @tablet-width {
     width: 440px;
     margin: auto;
-    padding: 52px 0 69px;
+    padding: 53px 0 69px;
     font-size: 18px;
   }
   @media @desktop-width {
@@ -24,7 +24,7 @@
   &--top {
     padding: 44px 0 48px;
     @media @tablet-width {
-      padding: 92px 0 73px;
+      padding: 92px 0 76px;
       br {
         display: none;
       }
@@ -51,9 +51,9 @@
 
 .photo__item {
   &--regular {
-    padding: 9px 20px 10px;
+    padding: 12px 20px 9px;
     @media @tablet-width {
-      padding: 9px 0;
+      padding: 7px 0 10px;
       width: 300px;
     }
     @media @desktop-width {
@@ -105,7 +105,7 @@
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  padding: 20px;
+  padding: 18px 17px 20px;
   color: @menu-color;
   background-color: @light-color;
 
@@ -119,8 +119,10 @@
 
   &--panorama {
     position: relative;
-    width: 236px;
+    box-sizing: border-box;
+    width: 280px;
     margin: 0 auto 10px;
+    padding: 19px 18px 20px;
 
     &::before {
       content: "Панорама дня";
@@ -146,12 +148,13 @@
     @media @tablet-width {
       align-content: flex-start;
       flex-direction: row;
-      width: 570px;
+      width: 620px;
       min-height: 70px;
-      margin-bottom: 40px;
+      margin-bottom: 42px;
+      padding: 23px 28px 25px;
     }
     @media @desktop-width {
-      width: 880px;
+      width: 940px;
       min-height: 0;
       margin-bottom: 42px;
     }
@@ -176,11 +179,14 @@
 }
 
 .photo__comment {
-  flex-grow: 1;
-  flex-basis: 45px;
-  margin: 0 0 8px;
+  margin: -1px 0 10px;
   font-size: 14px;
   line-height: 24px;
+
+  @media @tablet-width {
+    flex-grow: 1;
+    flex-basis: 45px;
+  }
   &--panorama {
     @media @tablet-width {
       flex-basis: auto;
@@ -195,23 +201,24 @@
   flex-direction: row;
   align-items: center;
   font-size: 12px;
-  line-height: 24px;
+  line-height: 23px;
   text-transform: uppercase;
   color: @accent-color;
-  &--panorama {
-    @media @tablet-width {
-      padding: 0;
-    }
-  }
+
   @media @tablet-width {
     flex-direction: row-reverse;
     justify-content: space-between;
+    margin-right: 5px;
+    &--panorama {
+      padding: 0;
+      margin-right: 0;
+    }
   }
 }
 
 .photo__like-btn {
   width: 13px;
-  margin-right: 17px;
+  margin-right: 19px;
   padding: 0;
   font-size: 0;
   border: none;
@@ -224,10 +231,10 @@
   }
 
   @media @tablet-width {
-    margin-right: 5px;
-    margin-left: 20px;
+    margin-left: 18px;
+    margin-right: 0;
   }
-  @media @tablet-width {
+  @media @desktop-width {
     margin-right: 0;
   }
 }
